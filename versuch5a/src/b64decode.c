@@ -8,7 +8,7 @@ int searchIndex(char ch)
     char b64Codes[]="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
     /* Durchsuche das Array bis das Ende des Strings erreicht wird
        oder das Zeichen ch gefunden wurde. */
-    for (i=0; result==-1 && b64Codes[i]!='\0', i++) ;
+    for (i=0; result==-1 && b64Codes[i]!='\0'; i++)
         if (b64Codes[i]==ch) 
             result=i;
     /* Gebe den gefunden Index zurueck oder -1 im Fehlerfall */  
