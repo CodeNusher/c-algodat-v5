@@ -4,6 +4,7 @@
  *  Created on: 01.10.2019
  *      Author: pliss
  */
+#include <stdio.h>
 #include "b64utils.h"
 
 char b64ResultFirstByte(int b64first, int b64second){
@@ -31,7 +32,15 @@ char b64ResultThirdByte(int b64third, int b64fourth){
 }
 
 void getFilteredString(char block[], unsigned maxSize){
-
+	char c;
+	int i=0;
+	while((c=getchar()) != EOF && (i<maxSize)){
+		if(c!=' ' && c!='\t' && c!='\v' && c!='\n' && c!='\r'){
+			block[i] = c;
+			block[i+1] = '\0';
+			i++;
+		}
+	}
 }
 
 void putData(const char block[], unsigned blockSize){
