@@ -44,5 +44,8 @@ void getFilteredString(char block[], unsigned maxSize){
 }
 
 void putData(const char block[], unsigned blockSize){
-
+	int i;
+	for(i=0; i<blockSize; i++){
+		putchar(block[i]);
+	}
 }
